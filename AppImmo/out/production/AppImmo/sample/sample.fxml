@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Gestion immobilier ">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="22.0" layoutY="75.0" prefHeight="148.0" prefWidth="50.0" spacing="17.5">
+                                    <children>
+                                        <Label text="ID" />
+                                        <Label text="Adress" />
+                                        <Label text="Type" />
+                                        <Label text="Surface" />
+                                        <Label text="Price" />
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="72.0" layoutY="70.0" prefHeight="175.0" prefWidth="100.0" spacing="10.0">
+                                    <children>
+                                        <TextField fx:id="tfId" />
+                                        <TextField fx:id="tfAdress" />
+                                        <TextField fx:id="tfType" />
+                                        <TextField fx:id="tfSurface" />
+                                        <TextField fx:id="tfPrice" />
+                                    </children>
+                                </VBox>
+                                <TableView fx:id="tvBooks" layoutX="224.0" layoutY="45.0" onMouseClicked="#UpActionn" prefHeight="251.0" prefWidth="334.0">
+                                    <columns>
+                                        <TableColumn fx:id="colId" prefWidth="41.19999694824219" text="ID" />
+                                        <TableColumn fx:id="colAdress" prefWidth="61.60003662109375" text="Adress" />
+                                        <TableColumn fx:id="colType" prefWidth="62.4000244140625" text="Type" />
+                                        <TableColumn fx:id="colSurface" prefWidth="84.79998779296875" text="Surface" />
+                                        <TableColumn fx:id="colPrice" prefWidth="78.79998779296875" text="Price" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="btnAdd" layoutX="21.0" layoutY="261.0" mnemonicParsing="false" onAction="#addAction" text="ADD" />
+                                <Button fx:id="btnUpdate" layoutX="72.0" layoutY="261.0" mnemonicParsing="false" onAction="#UpActionn" text="UpDate" />
+                                <Button fx:id="btnDelete" layoutX="139.0" layoutY="261.0" mnemonicParsing="false" onAction="#DeleteAction" text="Delete" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Gestion utilisateurs ">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="16.0" layoutY="58.0" prefHeight="114.0" prefWidth="82.0" spacing="17.5">
+                                    <children>
+                                        <Label text="Name" />
+                                        <Label text="Mail" />
+                                        <Label text="Role" />
+                                        <Label text="Password" />
+                                        <Label text="Phone" />
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="107.0" layoutY="52.0" prefHeight="160.0" prefWidth="100.0" spacing="10.0">
+                                    <children>
+                                        <TextField fx:id="fxName" />
+                                        <TextField fx:id="fxMail" />
+                                        <TextField fx:id="fxRole" />
+                                        <TextField fx:id="fxPass" />
+                                        <TextField fx:id="fxPhone" />
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnadd" layoutX="37.0" layoutY="254.0" mnemonicParsing="false" onAction="#addpro" text="ADD" />
+                                <Button layoutX="85.0" layoutY="254.0" mnemonicParsing="false" text="UpDate" />
+                                <Button fx:id="btndelete" layoutX="149.0" layoutY="254.0" mnemonicParsing="false" onAction="#deletepro" text="Dellet" />
+                                <TableView fx:id="vtable" layoutX="224.0" layoutY="37.0" prefHeight="278.0" prefWidth="372.0">
+                                    <columns>
+                                        <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+                                        <TableColumn fx:id="colMail" prefWidth="147.20001220703125" text="Mail" />
+                                        <TableColumn fx:id="colRol" prefWidth="41.5999755859375" text="Role" />
+                                        <TableColumn fx:id="colNumber" prefWidth="108.4000244140625" text="Number Phone" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</GridPane>
